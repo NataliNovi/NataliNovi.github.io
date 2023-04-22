@@ -10,6 +10,7 @@ html,
 body {
     height: 100vh;
     background-color: $color-main;
+
 }
 
 .container {
@@ -21,11 +22,17 @@ body {
         justify-content: space-between;
         align-items: center;
         font-family: $font-family-serif;
-        border: solid 1px $blue-background;
-        position: sticky;
+        border-bottom: solid 1px $blue-background;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 8px 0 0 0 #fff, 0 0 14px 0 rgba(0, 0, 0, .25);
+        z-index: 150;
+        background-color: $color-main;
+        padding-right: 20px;
     }
 
-    &__slogan {
+    &__social-links {
         width: 70vw;
         color: $blue-background;
         display: flex;
@@ -33,49 +40,66 @@ body {
 
     }
 
-    &__button {
+    &__button-header {
         width: 90px;
+        display: flex;
+
+        &_search {
+            width: 360px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+
+        }
+
+        &_donate {
+            width: 180px;
+        }
+    }
+
+    &__nav {
+
+        width: 20vw;
+        height: 100vh;
+        line-height: 1.8;
+        background-color: $white-background;
+        color: $color-blue;
+        font-family: $font-family-serif;
+        font-size: $font-size-medium;
+        position: fixed;
+        top: 120px;
+        left: 0px;
+
+    }
+
+    &__main {
+        margin-top: 0;
+        margin-left: 24vw;
+        width: 76vw;
+        display: flex;
+
+        &_photo {
+            width: 60%;
+        }
+
+        &_info {
+            width: 50%;
+        }
+
     }
 }
 
 .logo_img {
-    height: 100px;
+    height: 120px;
 }
 
-.nav-main {
-    display: flex;
+.nav-main-article {
+    display: grid;
+    margin-top: 120px;
+    z-index: 1;
+    margin-right: 40px;
 
-}
-
-.container__nav {
-
-    width: 20vw;
-    height: 100vh;
-    line-height: 1.6;
-    background-color: $white-background;
-    color: $blue-background;
-    font-family: $font-family-serif;
-    font-size: $font-size-medium;
-    position: sticky;
-
-}
-
-
-.container__main {
-    margin-top: 0;
-    width: 80vw;
-    // background-image: url(../../assets/images/girl.jpg);
-    // background-size: 100% auto;
-    // background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    background-color: $blue-background;
-    // grid-template-columns: 1fr, 1fr;
-    // grid-template-rows: 1fr, 1fr;
-}
-
-.container__main_photo {
-    width: 50%;
 }
 
 .main_photo {
@@ -83,28 +107,69 @@ body {
 
 }
 
-.container__main_info {
-    width: 50%;
-}
-
-.info_gete {
+.info__gete {
     font-size: $font-size-medium;
     padding-left: 40px;
+    padding-right: 40px;
     padding-top: 40px;
     margin-top: 0px;
-    color: white;
+    color: $color-blue;
     font-size: $font-size-large;
     font-family: $font-family-serif;
+    display: inline-block;
+
+    &_name {
+        position: absolute;
+        right: 50px;
+        font-size: $font-size-large;
+
+    }
 }
 
 .button {
     background-color: rgb(239, 193, 11);
-    width: 12rem;
-    height: 5vh;
+    width: 140px;
+    height: 40px;
     border-radius: 4px;
 
-    &__donate-main {
-        margin-left: 40px;
-        margin-top: 80px;
+    // &__donate-main {
+    //     margin-left: 40px;
+    //     margin-top: 80px;
+    // }
+}
+
+.community-describe {
+    width: 76vw;
+    color: $color-main;
+    margin-left: 24vw;
+    margin-top: -2px;
+    background-color: $blue-background;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.4;
+
+    &__diapeople-name {
+        font-size: $font-size-medium;
+        font-weight: bold;
+    }
+
+    &__form {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+
+
+        &_person-contact {
+            font-size: $font-size-medium;
+            width: 70%;
+            border-radius: 6px;
+            padding-left: 20px;
+            height: 40px;
+
+        }
+
+        &_submit-contact {
+            height: 40px;
+        }
     }
 }
