@@ -219,13 +219,13 @@ a:hover {
 
         &__form {
             display: flex;
-            width: 50%;
+            width: 100%;
             justify-content: space-between;
 
 
             &_person-contact {
 
-                width: 70%;
+                width: 100%;
                 border-radius: 6px;
                 padding-left: 20px;
                 height: 40px;
@@ -285,10 +285,24 @@ a:hover {
 
 }
 
+.connect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 103%;
+    height: 80px;
+    background-color: #c2d5ec;
+    color: $color-blue;
+    font-size: $font-size-medium;
+
+}
+
 .footer {
     margin-bottom: 140px;
     margin-left: 14rem;
-    width: calc(100% - 14rem);
+    // width: calc(100% - 14rem);
+    width: 103%;
     background-color: $color-blue;
     color: $color-main;
     height: 100px;
